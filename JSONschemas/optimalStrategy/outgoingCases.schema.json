@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/schema",
+    "$id" : "https://raw.githubusercontent.com/Blitz-BS/AICollection/main/JSONschemas/optimalStrategy/outgoingCases.schema.json",
     "title" : "list of the outgoing cases",
     "description" : "daily outgoing cases exited from the stock",
     "type" : "array",

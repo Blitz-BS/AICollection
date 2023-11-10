@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/schema",
+    "$id" : "https://raw.githubusercontent.com/Blitz-BS/AICollection/main/JSONschemas/optimalStrategy/accountingEntries.schema.json",
     "title" : "accounting entries",
     "type" : "array",
     "additionalProperties": false,    

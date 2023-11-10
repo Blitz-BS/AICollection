@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/schema",
+    "$id" : "https://raw.githubusercontent.com/Blitz-BS/AICollection/main/JSONschemas/optimalStrategy/events.schema.json",
     "title" : "list of the events",
     "description" : "list of the daily events",
     "type" : "array",

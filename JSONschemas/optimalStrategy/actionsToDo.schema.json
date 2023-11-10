@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/schema",
+    "$id" : "https://raw.githubusercontent.com/Blitz-BS/AICollection/main/JSONschemas/optimalStrategy/actionsToDo.schema.json",
     "title" : "actions to do",
     "description" : "list of the action to do during the day",
     "type" : "array",

@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/schema",
+    "$id" : "https://raw.githubusercontent.com/Blitz-BS/AICollection/main/JSONschemas/optimalStrategy/serviceParametrization.schema.json",
     "tile" : "Service Parametrization",
     "title": "Parametrization of a collection service",
     "additionalProperties": false,

@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/schema",
+    "$id" : "https://raw.githubusercontent.com/Blitz-BS/AICollection/main/JSONschemas/optimalStrategy/incomingCases.schema.json",
     "title" : "list of the incoming cases",
     "description" : "daily incoming cases added to the stock",
     "additionalProperties": false,
