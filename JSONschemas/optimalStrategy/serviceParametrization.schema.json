@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "tile" : "Service Parametrization",
+    "title": "Parametrization of a collection service",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "label" : {
+            "title" : "collection service label",
+            "description" : "Exemple : amicable collection service",
+            "type" : "string"
+        },
+        "revenuesCalculation" : {
+            "title" : "Calculation of revenues",
+            "description" : "Describe how revenues are calculated",
+            "type" : "object",
+            "properties" : {
+                "fixedFees" : {
+                    "title" : "fixed fees",
+                    "description" : "fees per processed case",
+                    "type" : "number",
+                    "minimum" : 0,
+                    "multipleOf" : 0.01,
+                    "default" : 0
+                },
+                "variableFees" : {
+                    "title" : "variable fees",
+                    "description" : "fees proportional to the collected amount",
+                    "type" : "number",
+                    "minimum" : 0,
+                    "maximum" : 1,
+                    "default" : 1                    
+                }
+            }
+        },
+        "actions" : {
+            "title" : "actions",
+            "description" : "actions available for the collection service",
+            "type" : "array",
+            "items" : {
+                "type" : "object",
+                "properties" : {
+                    "actionId" : {
+                        "title" : "identifier of the action",
+                        "enum" : ["call", "sms", "email", "letter"] 
+                    },
+                    "cost" : {
+                        "title" : "cost of the action",
+                        "type" : "number",
+                        "minimum" : 0
+                    },
+                    "productionCapacity" : {
+                        "title" : "daily production capacity",
+                        "type" : "integer",
+                        "minimum" : 0
+                    }
+                },
+                "required" : ["actionId"],
+                "minProperties" : 2,
+                "maxProperties" : 2
+            }
+        }
+    },
+    "required" : ["actions"]
+}
