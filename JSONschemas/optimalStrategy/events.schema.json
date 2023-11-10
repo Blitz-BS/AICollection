@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "title" : "list of the events",
+    "description" : "list of the daily events",
+    "type" : "array",
+    "additionalProperties": false,
+    "items" : {
+        "type" : "object",
+        "additionalProperties": true,
+        "properties" : {
+            "datetime" : {
+                "title" : "datetime",
+                "description" : "datetime of the event",
+                "type" : "string",
+                "format" : "date-time"
+            },
+            "caseId" : {
+                "title" : "case id",
+                "description" : "case concerned by the event unique id",
+                "type" : "string"
+            },
+            "type" : {
+                "title" : "type of event",
+                "enum" : ["call", "sms", "email", "letter"]           
+            },
+            "direction" : {
+                "title" : "direction of the event",
+                "enum" : ["outgoing", "incoming"]
+            },
+            "qualification" : {
+                "title" : "qualification of the event",
+                "enum" : ["success", "error"]
+            },
+            "callDuration" : {
+                "title" : "call duration",
+                "description" : "call duration in seconds",
+                "type" : "integer",
+                "minimum" : 0
+            },
+            "required" : ["datetime", "caseId", "type", "direction"]
+        }
+    }    
+}

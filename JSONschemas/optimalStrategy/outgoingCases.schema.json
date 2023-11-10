@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "title" : "list of the outgoing cases",
+    "description" : "daily outgoing cases exited from the stock",
+    "type" : "array",
+    "additionalProperties": false,
+    "items" : {
+        "type" : "object",
+        "additionalProperties": false,
+        "properties" : {
+            "date" : {
+                "title" : "date",
+                "description" : "date of exit from the stock",
+                "type" : "string",
+                "format" : "date"
+            },
+            "caseId" : {
+                "title" : "case id",
+                "description" : "case unique id",
+                "type" : "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "title" : "actions to do",
+    "description" : "list of the action to do during the day",
+    "type" : "array",
+    "additionalProperties": false,
+    "items" : {
+        "type" : "object",
+        "additionalProperties": false,
+        "properties" : {
+            "caseId" : {
+                "title" : "case id",
+                "description" : "case concerned by the action",
+                "type" : "string"
+            },
+            "actionId" : {
+                "title" : "identifier of the action",
+                "enum" : ["call", "sms", "email", "letter"] 
+            }
+        }
+    }    
+}

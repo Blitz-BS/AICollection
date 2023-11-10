@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "title" : "list of the incoming cases",
+    "description" : "daily incoming cases added to the stock",
+    "additionalProperties": false,
+    "type" : "array",
+    "items" : {
+        "type" : "object",
+        "additionalProperties": true,
+        "properties" : {
+            "date" : {
+                "title" : "date",
+                "description" : "date of entrance in the stock",
+                "type" : "string",
+                "format" : "date"
+            },
+            "caseId" : {
+                "title" : "case id",
+                "description" : "case unique id",
+                "type" : "string"
+            },
+            "debit" : {
+                "title" : "debit",
+                "type" : "number",
+                "minimum" : 0,
+                "multipleOf" : 0.01
+            },
+            "credit" : {
+                "title" : "credit",
+                "type" : "number",
+                "minimum" : 0,
+                "multipleOf" : 0.01
+            },
+            "type" : {
+                "title" : "type of debt",
+                "enum" : ["energy", "telephone", "water", "real estate rent", "consumer credit", "buy now pay later", "automotive", "real estate loan"]
+            },
+            "lastPaymentAge" : {
+                "title" : "age of the last payment",
+                "description" : "age in days",
+                "type" : "integer",
+                "minimum" : 0
+            },
+            "contractAge" : {
+                "title" : "age of the contract",
+                "description" : "age in days",
+                "type" : "integer",
+                "minimum" : 0
+            }
+        },
+        "required" : ["date","caseId", "debit", "credit", "type"]
+    }
+}

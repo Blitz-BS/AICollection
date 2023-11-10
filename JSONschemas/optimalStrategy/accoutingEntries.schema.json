@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "title" : "accounting entries",
+    "type" : "array",
+    "additionalProperties": false,    
+    "items" : {
+        "type" : "object",
+        "additionalProperties": false,
+        "properties" : {
+            "datetime" : {
+                "title" : "datetime",
+                "description" : "datetime of the entry",
+                "type" : "string",
+                "format" : "date-time"
+            },
+            "caseId" : {
+                "title" : "case id",
+                "description" : "case concerned by the entry",
+                "type" : "string"
+            },
+            "type" : {
+                "title" : "type of entry",
+                "enum" : ["debtor payment","fees"]           
+            },
+            "debit" : {
+                "title" : "debit",
+                "type" : "number",
+                "minimum" : 0,
+                "multipleOf" : 0.01
+            },
+            "credit" : {
+                "title" : "credit",
+                "type" : "number",
+                "minimum" : 0,
+                "multipleOf" : 0.01
+            }    
+        }
+    }
+}
