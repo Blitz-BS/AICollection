@@ -1,3 +1,4 @@
 {
-    "$schema": "https://json-schema.org/schema"
+    "$schema": "https://json-schema.org/schema",
+    "title" : "list of the new cases"
 }
