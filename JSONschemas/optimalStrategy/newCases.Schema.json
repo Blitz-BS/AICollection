@@ -1,4 +1,5 @@
 {
     "$schema": "https://json-schema.org/schema",
-    "title" : "list of the new cases"
+    "title" : "list of the new cases",
+    "description" : "daily new cases to add to the stock"
 }
