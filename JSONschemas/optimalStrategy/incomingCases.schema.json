@@ -47,6 +47,11 @@
                 "description" : "age in days",
                 "type" : "integer",
                 "minimum" : 0
+            },
+            "isTitled" : {
+                "title" : "the case has an enforceable title",
+                "type" :  "boolean",
+                "default" : false
             }
         },
         "required" : ["date","caseId", "debit", "credit", "type"]
